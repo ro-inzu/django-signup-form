@@ -1,0 +1,34 @@
+
+{% load static %}
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Setup</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,700,700i,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'signupform/css/styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+<div class="Wrap">
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="{% static 'accountsignup/js/scripts.js' %}"></script>
+{% block javascript %}{% endblock %}
+
+</body>
+</html>

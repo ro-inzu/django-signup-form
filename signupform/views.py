@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect, get_object_or_404
-from django import forms
 from django.http import HttpResponse
+import requests
 
 # Create your views here.
-def index(requests):
+def index(request):
+    hello = 'hello'
 
-    return HttpResponse("Hello, world. You're at the signupform index.")
+    return render(request,'signupform/form.html',{})

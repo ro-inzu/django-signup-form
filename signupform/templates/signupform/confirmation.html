@@ -1,0 +1,17 @@
+{% extends 'signupform/base.html' %}
+{% load static %}
+<!doctype html>
+
+{% block content %}
+ <div class = 'formbox'>
+     <form class="form-style-7" >
+         <h1>Django Sign up form</h1>
+     <ul>
+     <li>
+         <span>{{signup_info_list.0}}, thanks for signing up (: this is just a test DJango form your data has not been held anywhere!</span>
+     </li>
+     </ul>
+     </form>
+ </div>
+
+{% endblock %}

@@ -2,31 +2,32 @@
 {% load static %}
 
 {% block content %}
-<form class="form-style-7">
-<ul>
-<li>
-    <label for="name">Name</label>
-    <input type="text" name="name" maxlength="100">
-    <span>Enter your full name here</span>
-</li>
-<li>
-    <label for="email">Email</label>
-    <input type="email" name="email" maxlength="100">
-    <span>Enter a valid email address</span>
-</li>
-<li>
-    <label for="url">Website</label>
-    <input type="url" name="url" maxlength="100">
-    <span>Your website address (eg: http://www.google.com)</span>
-</li>
-<li>
-    <label for="bio">About You</label>
-    <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
-    <span>Say something about yourself</span>
-</li>
-<li>
-    <input type="submit" value="Send This" >
-</li>
-</ul>
-</form>
+<div class = 'formbox'>
+    <form class="form-style-7" method = 'POST'>{% csrf_token %}
+        <h1>Django Sign up form</h1>
+    <ul>
+    <li>
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name" id = 'first_name' maxlength="40" autofocus optional>
+        <span>Enter your first name here</span>
+    </li>
+    <li>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name" maxlength="40" id = 'last_name' required>
+        <span>Enter your last name here</span>
+    </li>
+    <li>
+        <label for="tel">Mobile Number</label>
+        <input type="tel" name="mobile_number" pattern="[789][0-9]{9}" id = 'mobile_number' required>
+        <span>Enter a valid mobile number</span>
+    </li>
+    <li>
+        <span>
+        <input type="checkbox" id="agree" value = 'selected' required><label for="check" class="terms_agree"> Agree with COMPANY <a href="https://google.com" class="link_text">Terms of Use</a> and <a href="https://google.com" class="link_text">Privacy Policy.</a></label>
+        </span>
+        <input type="submit" value="Sign Up" >
+    </li>
+    </ul>
+    </form>
+</div>
 {% endblock %}
